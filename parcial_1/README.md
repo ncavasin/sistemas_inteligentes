@@ -342,7 +342,7 @@ laptop: 87%
 cup: 87%
 ```
 
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen14.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen14.jpeg)
 ![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen14.jpg)
 
 ## Imagen 15:
