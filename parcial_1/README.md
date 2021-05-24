@@ -486,7 +486,7 @@ imagen23.jpg: Predicted in 32.250999 seconds.
 person: 79%
 ```
 ![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen23.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen23.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen23.jpg)
 
 ## Imagen 24:
 ```bash
