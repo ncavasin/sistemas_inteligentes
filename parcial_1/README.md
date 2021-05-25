@@ -18,13 +18,13 @@ YOLOv3 fué presentado en 2019 por [Joseph Redmon][jr] y [Ali Farhadi][af] en la
 Se utiliza una única red neuronal para analizar las imágenes. El análisis consiste en:
 - Sub-dividir cada imagen en regiones.
 - Identificar los contornos (*bounding boxes*) de cada región.
-- Predice las probabilidades de las dimensiones de cada contorno. 
+- Predecir las probabilidades de las dimensiones de cada contorno. 
 
 ![calculo_bbox](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/img_demo/calculo_contornos.png)
 
 > El cálculo de las probabilidades intenta obtener el ancho y el alto del contorno en base a los centroides devueltos por kMeans en la etapa de entrenamiento.
 
-Finalmente, cada contorno encontrado es pesado usando las dimensiones predictas y luego es asignado a una clase determinada que lo identifica con un objeto que YOLOv3 ya conoce.
+Finalmente, cada contorno encontrado es pesado usando las dimensiones calculadas por probabilidad y luego es asignado a una clase determinada que lo identifica con un objeto que YOLOv3 ya conoce.
 
 Para más información revisar su [paper][link_paper].
 
@@ -39,8 +39,6 @@ Debido a la falta de capacidad de cómputo, se optó por [Darknet][dn]. Un model
 # Inicialización
 Para poder utilizar YOLOv3 es necesario primero descargar y compilar Darknet desde cero y en modo CPU con las siguientes instrucciones:
 
-## Darknet
-
 **Descarga:**
 ```bash
 [nico@archlinux parcial_1]$ git clone https://github.com/pjreddie/darknet.git
@@ -50,6 +48,7 @@ remote: Total 5934 (delta 0), reused 0 (delta 0), pack-reused 5934
 Receiving objects: 100% (5934/5934), 6.35 MiB | 2.67 MiB/s, done.
 Resolving deltas: 100% (3925/3925), done.
 ```
+
 **Compilación:**
 
 ```bash
@@ -70,8 +69,6 @@ obj/captcha.o obj/lsd.o obj/super.o obj/art.o obj/tag.o obj/cifar.o obj/go.o obj
 usage: ./darknet <function>
 ```
 
-## YOLOv3
-
 Compilado Darknet correctamente, solo resta descargar los pesos obtenidos de YOLOv3 con el siguiente comando:
 
 **Descarga:**
@@ -90,7 +87,9 @@ yolov3.weights       100%[====================>] 236.52M  2.65MB/s    in 89s
 
 2021-05-24 17:21:00 (2.67 MB/s) - 'yolov3.weights' saved [248007048/248007048]
 ```
+
 **Verificación:**
+
 Se ejecuta el detector con una de los samples incluidos solo para verificar su correcto funcionamiento de la siguiente manera:
 ```bash
 [nico@archlinux darknet]$ ./darknet detect cfg/yolov3.cfg yolov3.weights data/dog.jpg
@@ -108,6 +107,7 @@ dog: 100%
 truck: 92%
 bicycle: 99%
 ```
+
 **Observaciones:**
 - Se demoró unos 30 segundos la predicción por estar compilado en modo CPU.
 - Se informa por consola la etiqueta de clase del objeto reconocido junto con el grado de certeza de las predicciones.
@@ -117,7 +117,9 @@ bicycle: 99%
 
 # Testeo
 
-Finalizada la incialización de YOLOv3 y de Darknet, se procederá a testear el sistema con 25 imágenes diferentes para observar su rendimiento. Estos son los resultados obtenidos:
+Finalizada la incialización de YOLOv3 y de Darknet, se procederá a testear el sistema con 25 imágenes diferentes para observar su rendimiento. 
+
+Estos son los resultados obtenidos:
 
 ## Imagen 01:
 
@@ -515,4 +517,46 @@ person: 97%
 ![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen25.jpg)
 
 
+# Conclusiones
 
+### A tener en cuenta:
+- Los creadores informan un rendimiento del 51.5% de precisión sobre [COCO][coco].
+- [COCO][coco] es el dataset utilizado para entrenar YOLOv3 y posee +330K imágenes, 80 categorías de objetos y 91 categorías de *cosas* (definido así por sus creadores). Se puede observar que posee pocos animales.
+- Las imágenes a procesar fueron tomadas de internet sin seguir ningún patrón, buscando alcanzar la mayor varianza posible y por ende no se especializan en un tópico determinado.
+
+___
+
+### Sobre los animales:
+- Toma a los tres camellos (imagen 05) por dos caballos + una oveja con un nivel de confianza por encima del 82%.
+- Considera que los canguros (imagen 07) son osos con una confianza del 70% y 55% para cada caso.
+- Clasifica al zorro (imagen 08) como un gato con un 89% de confianza al respecto.
+- Reconoce a todas las personas correctamente pero no identifica a ningun camello (imagen 25).
+
+**Conclusión 1:** el modelo no solo no es efectivo para reconocer animales por confundirlos, sino que en algunos casos directamente no detecta en la imagen al contorno ocupado por un animal.
+___
+
+### Sobre la comida:
+- Erróneamente etiqueta manzanas como naranjas (imagen 19) con un 68% de confianza.
+- Clasifica un carrito de supermercado como silla teniendo tan solo un 3% de desconfianza.
+- No reconoce paltas, tomates, cebollas ni bananas.
+- No detecta al pepino ni la berenjena (imagen 20) cuando resaltan bastante dentro del carrito y confunde un frasco con una botella.
+- Fracasa rotundamente en la detección de alimentos pertenecientes a la panadería (imagen 21); etiqueta a todos mal -hasta no reconoce algunas bandejas- a excepción del refrigerador.
+
+**Conclusión 2:** el modelo tiene dificultades al detectar contornos de alimentos que están pegados o muy cerca entre sí. De aquí se desprende su incapacidad para reconocer verduras como pepino o berenjena así como también su confusión entre: manzanas por naranjas, duranznos por manzanas, baguettes con *hot-dogs* y facturas por donuts.
+
+___
+
+### Sobre las personas, autos y paisajes:
+- Varios superhéroes de la imagen 17 no son detectados como personas.
+- No detecta elementos sostenidos por personas cuando identifica a las personas como tales. Por ejemplo, en la imagen 13 no detecta la guitarra que sostiene Mick Jagger pero sí lo reconoce a él como persona.
+- Reconoce muy bien a los individuos realizando diferentes deportes y hasta detecta la presencia de una pelota. 
+- Identifica con mucha precisión autos aun así estos no se vean por completo.
+- Detecta personas hasta en pinturas renacentistas con un elevado nivel de confianza.
+
+**Conclusión 3:** es evidente la elevada precisión que tiene el modelo a la hora de identificar autos, personas y contornos de tamaño mediano-grande, sobretodo cuando estos no están superpuestos o muy cercanos. 
+
+## Conclusión final:
+
+El dataset utilizado para entrenar al modelo influye directamente sobre la forma en al que este realizará predicciones. Es por esto que se debe buscar un dataset lo más genérico posible para evitar así que el modelo se vuelva *overfitted* o demasiado específico en algunos tópicos y que fracase en otros.
+
+[coco]: [mscoco.org/dataset/#overview](https://cocodataset.org/#home)
