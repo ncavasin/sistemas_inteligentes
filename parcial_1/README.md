@@ -20,7 +20,7 @@ Se utiliza una única red neuronal para analizar las imágenes. El análisis con
 - Identificar los contornos (*bounding boxes*) de cada región.
 - Predecir las probabilidades de las dimensiones de cada contorno. 
 
-![calculo_bbox](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/img_demo/calculo_contornos.png)
+![calculo_bbox](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/img_demo/calculo_contornos.png)
 
 > El cálculo de las probabilidades intenta obtener el ancho y el alto del contorno en base a los centroides devueltos por kMeans en la etapa de entrenamiento.
 
@@ -113,7 +113,7 @@ bicycle: 99%
 - Se informa por consola la etiqueta de clase del objeto reconocido junto con el grado de certeza de las predicciones.
 - Además, se guarda una nueva imagen *solo* con los contornos detectados y su etiqueta de clase.
 
-![imagen procesada](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/img_demo/predictions.jpg)
+![imagen procesada](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/img_demo/predictions.jpg)
 
 # Testeo
 
@@ -131,8 +131,8 @@ person: 100%
 person: 100%
 person: 99%
 ```
-![img1](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen01.jpg)
-![img1](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen01.jpg)
+![img1](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen01.jpg)
+![img1](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen01.jpg)
 
 ## Imagen 02:
 ```bash
@@ -152,8 +152,8 @@ person: 84%
 person: 76%
 person: 64%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen02.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen02.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen02.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen02.jpg)
 
 ## Imagen 03:
 ```bash
@@ -189,8 +189,8 @@ person: 69%
 person: 58%
 person: 51%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen03.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen03.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen03.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen03.jpg)
 
 ## Imagen 04:
 ```bash
@@ -206,8 +206,8 @@ person: 100%
 person: 100%
 person: 99%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen04.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen04.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen04.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen04.jpg)
 
 ## Imagen 05:
 ```bash
@@ -217,8 +217,8 @@ sheep: 82%
 horse: 98%
 horse: 88%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen05.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen05.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen05.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen05.jpg)
 
 ## Imagen 06:
 ```bash
@@ -231,8 +231,8 @@ bird: 59%
 bird: 50%
 person: 62%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen06.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen06.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen06.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen06.jpg)
 
 ## Imagen 07:
 ```bash
@@ -241,8 +241,8 @@ imagen07.jpg: Predicted in 30.669087 seconds.
 bear: 70%
 bear: 55%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen07.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen07.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen07.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen07.jpg)
 
 ## Imagen 08:
 ```bash
@@ -251,8 +251,8 @@ imagen08.jpg: Predicted in 30.241037 seconds.
 cat: 89%
 bench: 55%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen08.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen08.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen08.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen08.jpg)
 
 ## Imagen 09:
 ```bash
@@ -261,8 +261,8 @@ imagen09.jpg: Predicted in 28.651153 seconds.
 elephant: 99%
 dog: 74%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen09.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen09.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen09.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen09.jpg)
 
 ## Imagen 10:
 ```bash
@@ -282,8 +282,8 @@ person: 53%
 person: 51%
 person: 51%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen10.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen10.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen10.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen10.jpg)
 
 ## Imagen 11:
 ```bash
@@ -294,8 +294,8 @@ person: 99%
 person: 79%
 person: 61%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen11.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen11.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen11.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen11.jpg)
 
 ## Imagen 12:
 ```bash
@@ -317,8 +317,8 @@ person: 64%
 person: 52%
 person: 52%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen12.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen12.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen12.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen12.jpg)
 
 ## Imagen 13:
 ```bash
@@ -331,8 +331,8 @@ person: 98%
 person: 82%
 person: 50%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen13.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen13.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen13.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen13.jpg)
 
 ## Imagen 14:
 ```bash
@@ -344,8 +344,8 @@ laptop: 87%
 cup: 87%
 ```
 
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen14.jpeg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen14.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen14.jpeg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen14.jpg)
 
 ## Imagen 15:
 ```bash
@@ -362,8 +362,8 @@ car: 89%
 car: 79%
 car: 59%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen15.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen15.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen15.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen15.jpg)
 
 ## Imagen 16:
 ```bash
@@ -372,8 +372,8 @@ imagen16.jpg: Predicted in 31.395162 seconds.
 person: 99%
 person: 92%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen16.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen16.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen16.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen16.jpg)
 
 ## Imagen 17:
 ```bash
@@ -389,8 +389,8 @@ chair: 99%
 chair: 58%
 chair: 56%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen17.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen17.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen17.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen17.jpg)
 
 ## Imagen 18:
 ```bash
@@ -406,8 +406,8 @@ pottedplant: 80%
 pottedplant: 67%
 chair: 100%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen18.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen18.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen18.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen18.jpg)
 
 ## Imagen 19:
 ```bash
@@ -422,8 +422,8 @@ person: 93%
 person: 91%
 person: 70%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen19.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen19.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen19.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen19.jpg)
 
 ## Imagen 20:
 ```bash
@@ -432,8 +432,8 @@ imagen20.jpg: Predicted in 30.619464 seconds.
 bottle: 88%
 bottle: 83%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen20.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen20.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen20.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen20.jpg)
 
 ## Imagen 21:
 ```bash
@@ -458,8 +458,8 @@ donut: 52%
 donut: 51%
 hot dog: 65%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen21.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen21.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen21.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen21.jpg)
 
 ## Imagen 22:
 ```bash
@@ -478,8 +478,8 @@ person: 70%
 person: 53%
 person: 52%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen22.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen22.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen22.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen22.jpg)
 
 ## Imagen 23:
 ```bash
@@ -487,8 +487,8 @@ Enter Image Path: imagen23.jpg
 imagen23.jpg: Predicted in 32.250999 seconds.
 person: 79%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen23.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen23.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen23.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen23.jpg)
 
 ## Imagen 24:
 ```bash
@@ -500,8 +500,8 @@ person: 100%
 person: 98%
 person: 79%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen24.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen24.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen24.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen24.jpg)
 
 ## Imagen 25:
 ```bash
@@ -513,8 +513,8 @@ person: 99%
 person: 99%
 person: 97%
 ```
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/to_predict/imagen25.jpg)
-![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/predicted/imagen25.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/to_predict/imagen25.jpg)
+![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_1/yolov3/predicted/imagen25.jpg)
 
 
 # Conclusiones
