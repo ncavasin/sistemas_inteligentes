@@ -1,3 +1,7 @@
+# Continuación
+
+Este documento es el análisis de los resultados obtenidos al ejecutar el código presente en la notebook nombrada *vgg16.ipynb*. A continuación se muestran las imágenes entregadas al modelo junto con la etiqueta y el grado de certeza que este les asignó.
+
 ## Una por una:
 
 ![](https://raw.githubusercontent.com/ncavasin/sistemas_inteligentes/main/parcial_2/vgg/images/01_tomato.jpg)
