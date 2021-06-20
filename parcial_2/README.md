@@ -1,6 +1,9 @@
 # Continuación
 
-Este documento es el análisis de los resultados obtenidos al ejecutar el código presente en la notebook nombrada *vgg16.ipynb*. A continuación se muestran las imágenes entregadas al modelo junto con la etiqueta y el grado de certeza que este les asignó.
+Este documento es el análisis de los resultados obtenidos al ejecutar el código presente en la notebook [vgg16.ipynb](https://github.com/ncavasin/sistemas_inteligentes/blob/main/parcial_2/vgg/vgg16.ipynb). 
+
+
+A continuación se muestran las imágenes entregadas al modelo junto con la etiqueta y el grado de certeza que este les asignó.
 
 ## Una por una:
 
